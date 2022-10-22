@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Artiste(models.Model):
     first_name = models.CharField()
     last_name = models.CharField
@@ -10,8 +11,8 @@ class Song(models.Model):
     title = models.TextField()
     date = models.DateField()
     released = models.BooleanField()
-    likes = models.ManyToManyField('self', null = True)
-    artiste_id =models.ForeignKey(Artiste)
+    likes = models.ManyToManyField('self', null=True)
+    artiste_id = models.ForeignKey(Artiste)
 
 
 class Lyrics(models.Model):
